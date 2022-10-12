@@ -24,16 +24,18 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+        courses.add(course);
     }
 
     public void registerApprovedCourse( Course course )
     {
-        approvedCourses.put( course.getCode(), course );
+        approvedCourses.put(course.getCode(), course );
     }
 
     public boolean isCourseApproved( String courseCode )
     {
         //TODO implement this method
+        if(approvedCourses.containsKey(courseCode)) return true;
         return false;
     }
 
@@ -47,6 +49,7 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
+    
         return false;
     }
 
@@ -60,7 +63,7 @@ public class Student
     public List<Course> getApprovedCourses()
     {
         //TODO implement this method
-        return null;
+        return courses;
     }
 
     @Override

@@ -27,12 +27,19 @@ public class StudentService
     public boolean isSubscribed( String studentId )
     {
         //TODO implement this method
+        if(students.containsKey(studentId)) return true;
         return false;
     }
 
     public void showSummary()
     {
-        //TODO implement
+        //TODO implement this method
+        System.out.println( "Subscribed Students:" );
+        for ( String key : students.keySet() )
+        {
+            Student student = students.get( key );
+            System.out.println( student );
+        }
     }
 
     public void enrollToCourse( String studentId, Course course )
