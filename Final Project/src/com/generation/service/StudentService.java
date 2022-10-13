@@ -34,11 +34,15 @@ public class StudentService
     public void showSummary()
     {
         //TODO implement this method
-        System.out.println( "Subscribed Students:" );
+        System.out.println( "Students:" );
         for ( String key : students.keySet() )
         {
             Student student = students.get( key );
             System.out.println( student );
+            System.out.println( "Approved Courses:" );
+            for (Course c : student.getApprovedCourses()) {
+                System.out.println(c);
+            }
         }
     }
 
